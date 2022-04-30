@@ -42,10 +42,10 @@ class HttpParser:
 
     def _parse_request_line(self):
         if self._request_line.count(' ') != 2:
-            raise InvalidHttpRequest(f'Invalid requst line: {self._request_line}')
+            raise InvalidHttpRequest(f'Invalid request line: {self._request_line}')
         parts = self._request_line.split()
         if len(parts) != 3:
-            raise InvalidHttpRequest(f'Invalid requst line: {self._request_line}')
+            raise InvalidHttpRequest(f'Invalid request line: {self._request_line}')
 
         request_method, url, http_protocol = parts
 
